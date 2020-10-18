@@ -1,1 +1,4 @@
-limit n 等同于 limit 0,n
+limit n 
+limit 0,n
+limit n offset 0
+all the same!
