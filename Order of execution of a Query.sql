@@ -8,9 +8,6 @@ Once we have the total working set of data, the first-pass WHERE constraints are
 3. GROUP BY
 The remaining rows after the WHERE constraints are applied are then grouped based on common values in the column specified in the GROUP BY clause. As a result of the grouping, there will only be as many rows as there are unique values in that column. Implicitly, this means that you should only need to use this when you have aggregate functions in your query.
 
-4. HAVING
-If the query has a GROUP BY clause, then the constraints in the HAVING clause are then applied to the grouped rows, discard the grouped rows that don't satisfy the constraint. Like the WHERE clause, aliases are also not accessible from this step in most databases.
-
 5. SELECT
 Any expressions in the SELECT part of the query are finally computed.
 
@@ -22,3 +19,8 @@ If an order is specified by the ORDER BY clause, the rows are then sorted by the
 
 8. LIMIT / OFFSET
 Finally, the rows that fall outside the range specified by the LIMIT and OFFSET are discarded, leaving the final set of rows to be returned from the query.
+
+
+4. HAVING
+If the query has a GROUP BY clause, then the constraints in the HAVING clause are then applied to the grouped rows, discard the grouped rows that don't satisfy the constraint. Like the WHERE clause, aliases are also not accessible from this step in most databases.
+
