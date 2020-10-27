@@ -1,6 +1,6 @@
 Query order of execution
 
-1. FROM and JOINs
+1. FROM and JOIN
 
 2. WHERE
 
